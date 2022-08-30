@@ -3,39 +3,39 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class _15649 {
+public class _15652 {
+
+    static int [] arr;
+    static  StringBuilder sb;
+
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        boolean [] check = new boolean[N];
-        int [] arr = new int [M];
+        arr = new int [M];
+        sb = new StringBuilder();
 
-        DFS(arr, check, N, M, 0);
+        DFS(N, M,1,0);
+        System.out.print(sb);
 
     }
-
-    public static void DFS(int [] arr, boolean [] check, int N, int M, int depth){
+    public static void DFS(int N, int M, int at, int depth){
 
         if (depth == M){
             for (int i =0; i < M; i++){
-                System.out.print(arr[i]+" ");
+                sb.append(arr[i]+" ");
             }
-            System.out.println();
+            sb.append("\n");
             return;
         }
 
-        for (int i = 0; i < N; i++){
-            if(!check[i]){
-                check[i] = true;
-                arr[depth] = i+1;
-                DFS(arr, check, N, M, depth+1);
-                check[i] = false;
-            }
+        for (int i = at; i <= N; i++){
+            arr[depth] = i;
+            DFS(N, M, i,depth+1);
         }
     }
-
 }
