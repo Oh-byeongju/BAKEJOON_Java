@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _1149_2 {
 
     public static int [][] arr;
     public static int [][] dp;
