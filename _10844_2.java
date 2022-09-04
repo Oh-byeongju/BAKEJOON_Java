@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main{
+public class _10844_2{
 
     public static long [][] dp;
     public static int num = 1000000000;
