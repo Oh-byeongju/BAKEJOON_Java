@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main{
+public class _11053{
 
     public static int [] dp;
     public static int [] arr;
@@ -27,7 +27,7 @@ public class Main{
             }
         }
 
-       int max_num = 0;
+        int max_num = 0;
 
         for (int i = 1; i <= N; i++){
             max_num = Math.max(max_num, dp[i]);
