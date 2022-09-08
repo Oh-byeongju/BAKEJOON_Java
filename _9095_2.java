@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main{
+public class _9095_2{
 
     public static int [] dp;
     public static void main(String [] args) throws IOException{
