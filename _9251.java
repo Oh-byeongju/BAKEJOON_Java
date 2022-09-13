@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class _9251 {
 
     public static int [][] dp;
     public static char[] arr1;
