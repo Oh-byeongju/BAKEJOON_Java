@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Main {
+public class _1541 {
 
     static int cnt = 0;
 
