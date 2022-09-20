@@ -1,69 +1,43 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.StringTokenizer;
 
 public class Main {
 
-    static int cnt = 0;
-
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String S = br.readLine();
-        char [] arr = S.toCharArray();
 
-        ArrayList<Integer> nums = new ArrayList<Integer>();
-        ArrayList<String> op = new ArrayList<String>();
-        ArrayList<Integer> total_nums = new ArrayList<Integer>();
+        int N = Integer.parseInt(br.readLine());
+        int [] arr = new int[N];
+        int [] stack = new int[N];
+        int size = 0;
 
-        int start = 0;
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i] == '+' || arr[i] == '-'){
-                nums.add(Integer.parseInt(S.substring(start, i)));
-                op.add(S.substring(i, i+1));
-                start = i+1;
+        for (int i =0; i < N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        stack[0] = arr[0];
+        int cnt = 0;
+
+        for (int i = 1; i < N; i++) {
+            cnt += 1;
+
+            if (stack[size] < arr[i]){
+                for (int j = 0; j < cnt; j++) {
+                    sb.append(arr[i]).append(" ");
+                }
+                size++;
+                stack[size] = arr[i];
+                cnt = 0;
             }
 
-            if (i == arr.length-1){
-                nums.add(Integer.parseInt(S.substring(start, arr.length)));
-            }
+
         }
 
 
-        for (int i = 0; i < op.size(); i++){
-            if (Objects.equals(op.get(i), "+")){
-                nums.set(i+1, nums.get(i) + nums.get(i+1));
-                nums.set(i, 0);
-            }
-
-            if (Objects.equals(op.get(i), "-")){
-                total_nums.add(nums.get(i));
-                cnt++;
-            }
-
-            if (i == op.size()-1) {
-                total_nums.add(nums.get(i+1));
-            }
-        }
-
-        if (cnt == 0){
-            if (total_nums.size() == 0){
-                System.out.println(nums.get(0));
-            }
-            else{
-                System.out.println(total_nums.get(0));
-            }
-        }
-        else{
-            int result = total_nums.get(0);
-            for (int i = 0; i < cnt; i++){
-                result = result - total_nums.get(i+1);
-            }
-            System.out.println(result);
-        }
     }
 }
-
