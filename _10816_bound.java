@@ -34,6 +34,7 @@ public class _10816_bound {
         System.out.println(sb);
     }
 
+    // lower-bound
     public static int min_ref(int num){
         int start = 0;
         int end = N;
@@ -52,6 +53,7 @@ public class _10816_bound {
 
     }
 
+    //upper-bound
     public static int max_ref(int num){
         int start = 0;
         int end = N;
