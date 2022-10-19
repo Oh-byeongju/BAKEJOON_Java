@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _24480 {
     static int N, M, cnt;
     public static int [] visted;
     public static ArrayList<ArrayList<Integer>> graph;
