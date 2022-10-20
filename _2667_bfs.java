@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class _2667_bfs {
 
     public static int N, cnt;
     public static int [] dx, dy;

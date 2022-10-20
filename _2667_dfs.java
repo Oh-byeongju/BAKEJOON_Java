@@ -1,11 +1,10 @@
 //22-10-20
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class _2667_dfs {
 
     public static int N, cnt;
     public static int [] dx, dy;
@@ -37,7 +36,7 @@ public class Main {
             for (int j = 0; j < N; j++){
                 if (arr[i][j] == 1 && !visited[i][j]){
                     cnt = 0;
-                    bfs(i, j);
+                    dfs(i, j);
                     result.add(cnt);
                 }
             }
@@ -49,30 +48,22 @@ public class Main {
         }
     }
 
-    public static void bfs(int i, int j){
-        Queue<Point> queue = new LinkedList<>();
-        visited[i][j] = true;
-        queue.offer(new Point(i, j));
+    public static void dfs(int y, int x){
+
+        visited[y][x] = true;
         cnt += 1;
 
-        while(!queue.isEmpty()) {
-            Point now;
-            now = queue.poll();
+        for (int i = 0; i < 4; i++) {
+            int a = x + dx[i];
+            int b = y + dy[i];
 
-            for (int l = 0; l < 4; l++) {
-                int nx = now.x + dx[l];
-                int ny = now.y + dy[l];
+            if (0 <= a && a < N && 0 <= b && b < N) {
+                if (visited[b][a]) {
+                    continue;
+                }
 
-                if (0 <= nx && nx < N && 0 <= ny && ny < N) {
-                    if (visited[nx][ny]) {
-                        continue;
-                    }
-
-                    if (arr[nx][ny] == 1) {
-                        queue.offer(new Point(nx, ny));
-                        cnt += 1;
-                        visited[nx][ny] = true;
-                    }
+                if (arr[b][a] == 1){
+                    dfs(b, a);
                 }
             }
         }

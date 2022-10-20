@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-public class _24480 {
+public class _24479_dfs {
     static int N, M, cnt;
     public static int [] visted;
     public static ArrayList<ArrayList<Integer>> graph;
@@ -33,9 +33,8 @@ public class _24480 {
         }
 
         for(int i = 0; i < graph.size(); i++){
-            Collections.sort(graph.get(i),Collections.reverseOrder());
+            Collections.sort(graph.get(i));
         }
-
         cnt = 1;
         visted = new int[N+1];
         dfs(R);
