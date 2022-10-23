@@ -5,12 +5,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _15654 {
 
     static int N, M;
     static boolean [] check;
     static int [] arr, nums;
-    static StringBuilder sb;
 
     public static void main(String[] args) throws IOException {
 
@@ -20,7 +19,6 @@ public class Main {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         nums = new int[N];
-        sb = new StringBuilder();
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++){
@@ -31,22 +29,25 @@ public class Main {
         check = new boolean[N];
         arr = new int [M];
 
-        DFS(0,0);
-        System.out.print(sb);
+        DFS(0);
     }
-    public static void DFS(int at, int depth){
+    public static void DFS(int depth){
 
         if (depth == M){
             for (int i = 0; i < M; i++){
-                sb.append(arr[i]).append(" ");
+                System.out.print(arr[i]+" ");
             }
-            sb.append("\n");
+            System.out.println();
             return;
         }
 
-        for (int i = at; i < N; i++){
-            arr[depth] = nums[i];
-            DFS(i,depth + 1);
+        for (int i = 0; i < N; i++){
+            if (!check[i]) {
+                arr[depth] = nums[i];
+                check[i] = true;
+                DFS( depth + 1);
+                check[i] = false;
+            }
         }
     }
 }

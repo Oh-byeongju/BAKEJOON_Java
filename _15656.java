@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _15656 {
 
     static int N, M;
     static boolean [] check;
@@ -31,10 +31,10 @@ public class Main {
         check = new boolean[N];
         arr = new int [M];
 
-        DFS(0,0);
+        DFS(0);
         System.out.print(sb);
     }
-    public static void DFS(int at, int depth){
+    public static void DFS(int depth){
 
         if (depth == M){
             for (int i = 0; i < M; i++){
@@ -44,9 +44,9 @@ public class Main {
             return;
         }
 
-        for (int i = at; i < N; i++){
+        for (int i = 0; i < N; i++){
             arr[depth] = nums[i];
-            DFS(i,depth + 1);
+            DFS(depth + 1);
         }
     }
 }
