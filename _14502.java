@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _14502 {
 
     public static int [] dy, dx;
     public static int N, M, max_val;
