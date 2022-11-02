@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _2206 {
 
     public static int N, M, minVal;
     public static int [][] graph;
