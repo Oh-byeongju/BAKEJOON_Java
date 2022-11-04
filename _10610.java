@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import static java.lang.System.exit;
 
-public class Main{
+public class _10610{
 
     public static void main(String [] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
