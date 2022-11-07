@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _1182 {
 
     public static int N, S, cnt;
     public static int [] arr;
