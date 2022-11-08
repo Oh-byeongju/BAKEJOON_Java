@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 
-public class Main {
+public class _5568 {
 
     public static int N, K;
     public static String [] arr, res_arr;
