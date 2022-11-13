@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _2210 {
 
     public static int [] dx, dy;
     public static char [][] graph;
