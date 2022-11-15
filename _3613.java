@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 
 import static java.lang.System.exit;
 
-public class Main {
+public class _3613 {
 
     public static void main(String [] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -60,8 +60,8 @@ public class Main {
         else {
             for (int i = 0; i < arr2.length; i++) {
                 if (Character.isUpperCase(arr2[i].charAt(0))) { // 만약 대문자면
-                   char temp = Character.toLowerCase(arr2[i].charAt(0));
-                   arr2[i] = "_" + temp;
+                    char temp = Character.toLowerCase(arr2[i].charAt(0));
+                    arr2[i] = "_" + temp;
                 }
             }
             StringBuilder sb = new StringBuilder();
