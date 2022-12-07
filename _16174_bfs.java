@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 import static java.lang.System.exit;
 
-public class Main {
+public class _16174_bfs {
 
     public static int [][] graph;
     public static boolean [][] visit;
