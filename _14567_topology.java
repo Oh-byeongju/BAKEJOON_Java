@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _14567_topology {
 
     public static int N, M;
     public static int [] degree, result;
