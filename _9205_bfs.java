@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _9205_bfs {
 
     public static int [] dx;
     public static int [] dy;
