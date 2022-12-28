@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _20116 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -30,6 +30,7 @@ public class Main {
             if (arr[i-1] - L < result && result < arr[i-1] + L) {
                 cnt++;
             }
+
             else {
                 check = false;
                 break;
