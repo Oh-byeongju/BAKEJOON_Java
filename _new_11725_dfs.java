@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _new_11725_dfs {
     static int N;
     static boolean [] visited;
     static int [] parent;
