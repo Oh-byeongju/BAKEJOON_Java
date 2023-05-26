@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _new_11725_bfs {
     static int N;
     static boolean [] visited;
     static int [] parent;
