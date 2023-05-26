@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _new_1325_bfs {
     static int N, M;
     static int max_num = 0;
     static boolean [] visited;
