@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class _new_16234_bfs {
 
     static int N, L, R;
     static int cnt, sum, result; // 연합국의 개수, 합계, 인구이동 요일
