@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 
 import static java.lang.System.exit;
 
-public class Main {
+public class _new_1343_greedy {
     public static void main(String [] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
